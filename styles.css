@@ -59,7 +59,8 @@ em { font-style: italic; color: var(--accent); font-variation-settings: "opsz" 1
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.brand { font-family: var(--serif); font-size: 26px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand { font-family: var(--serif); font-size: 26px; text-decoration: none; display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.nav .btn-small { white-space: nowrap; }
 .brand-dot { color: var(--accent); }
 .brand-mark {
   width: 22px; height: 22px; background: var(--ink);
@@ -202,6 +203,22 @@ section { padding-inline: var(--gutter); }
 .stat-n { font-family: var(--serif); font-size: clamp(48px, 6vw, 88px); line-height: 1; font-weight: 350; }
 .stat-l { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
 
+/* cases */
+.cases { padding-block: clamp(80px, 10vw, 140px) 0; }
+.case-list { list-style: none; padding: 0; margin: 0 auto; max-width: 1440px; border-top: 1px solid var(--line); }
+.case {
+  display: grid; grid-template-columns: minmax(220px, .8fr) 2fr; gap: clamp(20px, 4vw, 64px);
+  padding: 36px 0; border-bottom: 1px solid var(--line);
+  transition: padding .35s cubic-bezier(.2, .8, .2, 1), background .35s;
+}
+.case:hover { background: var(--paper-2); padding-inline: 20px; }
+.case-meta { display: flex; flex-direction: column; gap: 4px; }
+.case-years { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--accent); }
+.case-org { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; }
+.case-role { font-size: 14px; color: var(--ink-soft); }
+.case-highlight { font-family: var(--serif); font-style: italic; font-size: clamp(26px, 3vw, 40px); line-height: 1.1; margin: 0 0 12px; }
+.case-body p:last-child { color: var(--ink-soft); margin: 0; max-width: 62ch; }
+
 /* about */
 .about {
   max-width: 1440px; margin: 0 auto; padding-block: clamp(80px, 10vw, 140px);
@@ -289,9 +306,13 @@ details p { margin: 0 0 28px; color: var(--ink-soft); max-width: 70ch; }
 @media (max-width: 720px) {
   body { font-size: 17px; }
   .nav-links { display: none; }
+  .brand { font-size: 21px; gap: 8px; }
+  .nav .btn-small { padding: 9px 14px; font-size: 13px; }
   .pain-list, .service-grid { grid-template-columns: 1fr; }
   .pain-list li, .pain-list li:nth-child(even) { padding: 28px 0; border-right: 0; }
   .steps { grid-template-columns: 1fr; }
+  .case { grid-template-columns: 1fr; gap: 14px; }
+  .case:hover { padding-inline: 0; background: none; }
   .photo-stamp { right: 0; width: 104px; height: 104px; font-size: 10px; }
   .btn-big { width: 100%; justify-content: center; }
   .ticker-track { font-size: 20px; }
