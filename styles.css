@@ -222,14 +222,14 @@ section { padding-inline: var(--gutter); }
 /* about */
 .about {
   max-width: 1440px; margin: 0 auto; padding-block: clamp(80px, 10vw, 140px);
-  display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 110px); align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center;
 }
 .about-photo { position: relative; }
 .photo-placeholder, .about-photo img {
   width: 100%; aspect-ratio: 4 / 5; border-radius: 200px 200px var(--radius) var(--radius);
   object-fit: cover; display: block;
 }
-.about-photo img { height: auto; object-position: 50% 30%; background: var(--paper-2); }
+.about-photo img { height: auto; aspect-ratio: 1367 / 2048; background: var(--paper-2); }
 .photo-placeholder {
   background: repeating-linear-gradient(135deg, var(--paper-2) 0 14px, #e3d9c8 14px 28px);
   border: 1px solid var(--line);
