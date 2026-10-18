@@ -229,6 +229,7 @@ section { padding-inline: var(--gutter); }
   width: 100%; aspect-ratio: 4 / 5; border-radius: 200px 200px var(--radius) var(--radius);
   object-fit: cover; display: block;
 }
+.about-photo img { height: auto; object-position: 50% 30%; background: var(--paper-2); }
 .photo-placeholder {
   background: repeating-linear-gradient(135deg, var(--paper-2) 0 14px, #e3d9c8 14px 28px);
   border: 1px solid var(--line);
