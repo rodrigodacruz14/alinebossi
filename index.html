@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <header class="nav" id="top">
@@ -54,38 +54,16 @@
         </div>
       </div>
 
-      <!-- Signature: funil animado -->
-      <figure class="hero-funnel reveal" style="--d:.2s" aria-label="Ilustração de um funil: captação, aquecimento, conteúdo, carrinho">
-        <svg viewBox="0 0 420 460" role="img">
-          <defs>
-            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-width=".5" opacity=".18" />
-            </pattern>
-          </defs>
-          <rect width="420" height="460" fill="url(#grid)" />
-          <g class="funnel-layers">
-            <path class="layer l1" d="M30 40 H390 L350 120 H70 Z" />
-            <path class="layer l2" d="M76 132 H344 L310 212 H110 Z" />
-            <path class="layer l3" d="M116 224 H304 L276 304 H144 Z" />
-            <path class="layer l4" d="M150 316 H270 L250 396 H170 Z" />
-          </g>
-          <g class="funnel-labels">
-            <text x="210" y="86">CAPTAÇÃO</text>
-            <text x="210" y="178">AQUECIMENTO</text>
-            <text x="210" y="270">CPLs</text>
-            <text x="210" y="362">CARRINHO</text>
-          </g>
-          <g class="drops">
-            <circle cx="160" cy="20" r="4" />
-            <circle cx="210" cy="20" r="4" />
-            <circle cx="260" cy="20" r="4" />
-            <circle cx="190" cy="20" r="4" />
-            <circle cx="235" cy="20" r="4" />
-          </g>
-          <path class="out" d="M210 400 V448" />
-        </svg>
-        <figcaption>
-          <span class="tag">fig. 01</span> Cada etapa com dono, prazo e indicador.
+      <figure class="hero-photo reveal" style="--d:.2s">
+        <picture>
+          <source type="image/webp" srcset="img/aline-640.webp 640w, img/aline-1100.webp 1100w" sizes="(max-width: 960px) 90vw, 40vw" />
+          <img src="img/aline-1100.jpg" srcset="img/aline-640.jpg 640w, img/aline-1100.jpg 1100w" sizes="(max-width: 960px) 90vw, 40vw"
+               width="1100" height="1648" fetchpriority="high" decoding="async"
+               alt="Aline Bossi, gerente de projetos, sorrindo" />
+        </picture>
+        <figcaption class="hero-badge">
+          <strong>100+</strong>
+          <span>lançamentos entregues desde 2016</span>
         </figcaption>
       </figure>
     </section>
@@ -365,6 +343,6 @@
     </span>
   </footer>
 
-  <script src="script.js?v=4" defer></script>
+  <script src="script.js?v=6" defer></script>
 </body>
 </html>
